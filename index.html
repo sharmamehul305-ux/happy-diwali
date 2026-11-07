@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d1b" />
+    <meta
+      name="description"
+      content="A little light, a lot of love. Celebrate Diwali 2026 with a special greeting from Mehul Sharma."
+    />
+    <link rel="icon" href="assets/icons/diya-favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Happy Diwali 2026 — A Special Wish From Mehul Sharma" />
+    <meta
+      property="og:description"
+      content="May your life shine brighter than millions of diyas. A little light, a lot of love, from Mehul Sharma."
+    />
+    <title>Happy Diwali 2026 — A Special Wish From Mehul Sharma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Mehul Sharma, back to top">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>Mehul Sharma</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#celebrate">Celebrate</a>
+        <a href="#wish">Your wish</a>
+        <a href="#fireworks">Fireworks</a>
+      </nav>
+      <button class="sound-toggle icon-button" id="mute-toggle" type="button" aria-pressed="false" aria-label="Unmute sounds">
+        <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
+        <span class="sound-label">Sound off</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <canvas class="fireworks-canvas hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-ornament hero-ornament-left" aria-hidden="true">✳</div>
+        <div class="hero-ornament hero-ornament-right" aria-hidden="true">✳</div>
+        <div class="hero-content">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A FESTIVAL OF LIGHT &amp; LOVE <span class="eyebrow-line"></span></p>
+          <h1 id="hero-title"><span>Happy Diwali</span><strong>2026</strong></h1>
+          <p class="hero-copy">May your world glow a little brighter.<br />May your heart feel a little lighter.</p>
+          <button class="button button-gold" id="hero-light-button" type="button">
+            <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+            Light up your diya
+          </button>
+          <a class="scroll-cue" href="#celebrate">
+            <span>SCROLL TO FEEL THE LIGHT</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="hero-diya" aria-hidden="true">
+          <span class="diya-halo"></span>
+          <span class="diya-flame"></span>
+          <span class="diya-wick"></span>
+          <span class="diya-bowl"><span class="diya-rim"></span><span class="diya-detail">✳</span></span>
+          <span class="diya-shadow"></span>
+        </div>
+        <p class="hero-date"><span>✦</span> Festival of Lights <span>✦</span></p>
+      </section>
+
+      <section class="celebrate section-pad" id="celebrate" aria-labelledby="celebrate-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-dark">A MOMENT TO MAKE YOURS</p>
+          <h2 id="celebrate-title">One little flame.<br /><em>A world of warmth.</em></h2>
+          <p>Every light begins with a little spark. Tap the diya and let yours shine.</p>
+        </div>
+        <div class="interactive-diya-wrap">
+          <div class="mandala mandala-one" aria-hidden="true"></div>
+          <div class="mandala mandala-two" aria-hidden="true"></div>
+          <div class="diya-sparkles" aria-hidden="true"></div>
+          <button class="interactive-diya" id="diya-button" type="button" aria-label="Light the diya" aria-pressed="false">
+            <svg viewBox="0 0 300 260" role="img" aria-labelledby="diya-title diya-desc">
+              <title id="diya-title">A traditional golden diya</title>
+              <desc id="diya-desc">Tap to light the diya and make its flame glow.</desc>
+              <defs>
+                <linearGradient id="flameGradient" x1="0" x2="1" y1="1" y2="0">
+                  <stop offset="0" stop-color="#ff5c22" />
+                  <stop offset=".58" stop-color="#ffb51b" />
+                  <stop offset="1" stop-color="#fff5bb" />
+                </linearGradient>
+                <linearGradient id="bowlGradient" x1=".2" x2=".8" y1="0" y2="1">
+                  <stop offset="0" stop-color="#ffd976" />
+                  <stop offset=".45" stop-color="#c77c23" />
+                  <stop offset="1" stop-color="#773610" />
+                </linearGradient>
+                <radialGradient id="bowlShine" cx=".5" cy=".2" r=".8">
+                  <stop offset="0" stop-color="#fff1b1" stop-opacity=".85" />
+                  <stop offset="1" stop-color="#fff1b1" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <ellipse class="svg-diya-glow" cx="150" cy="204" rx="100" ry="28" />
+              <path class="svg-flame" d="M151 38c-3 20-30 37-27 63 2 17 13 27 27 27s26-12 26-28c0-22-20-39-26-62Z" fill="url(#flameGradient)" />
+              <path class="svg-inner-flame" d="M151 74c-2 12-15 22-13 36 1 7 6 12 13 12s13-6 13-13c0-12-10-23-13-35Z" fill="#fff5bd" />
+              <path d="M147 128h8l6 19h-20z" fill="#291b18" />
+              <path d="M53 167c10 35 40 56 97 56s87-21 97-56H53Z" fill="url(#bowlGradient)" stroke="#ffda79" stroke-width="3" />
+              <ellipse cx="150" cy="166" rx="97" ry="22" fill="url(#bowlGradient)" stroke="#ffe39a" stroke-width="4" />
+              <ellipse cx="150" cy="166" rx="77" ry="14" fill="#522b17" />
+              <ellipse cx="150" cy="162" rx="75" ry="12" fill="url(#bowlShine)" />
+              <path d="M77 186c19 15 46 21 73 21s55-6 73-21" fill="none" stroke="#ffe5a0" stroke-opacity=".62" stroke-width="3" />
+              <path d="M104 215c14 5 30 7 46 7s32-2 46-7" fill="none" stroke="#9e5419" stroke-width="2" />
+              <circle cx="92" cy="172" r="3" fill="#fff0bd" /><circle cx="208" cy="172" r="3" fill="#fff0bd" />
+              <path d="M150 177v17m-9-8h18m-15-6 12 12m0-12-12 12" stroke="#ffe39a" stroke-width="1.5" opacity=".8" />
+            </svg>
+          </button>
+          <p class="diya-instruction" id="diya-instruction" aria-live="polite">A little tap can light up everything.</p>
+        </div>
+      </section>
+
+      <section class="greeting section-pad" aria-labelledby="greeting-title">
+        <div class="greeting-glow" aria-hidden="true"></div>
+        <div class="greeting-card">
+          <div class="card-corner corner-tl" aria-hidden="true">✦</div><div class="card-corner corner-tr" aria-hidden="true">✦</div>
+          <div class="card-corner corner-bl" aria-hidden="true">✦</div><div class="card-corner corner-br" aria-hidden="true">✦</div>
+          <span class="card-diya" aria-hidden="true">🪔</span>
+          <p class="eyebrow">MAY THE LIGHT FIND YOU</p>
+          <h2 id="greeting-title">Festival of <em>Lights</em></h2>
+          <div class="ornament-divider" aria-hidden="true"><span></span>✳<span></span></div>
+          <p class="greeting-message">
+            May the glow of every diya illuminate your path.<br class="desktop-break" />
+            May laughter fill your home, love find its way to your heart,
+            and new beginnings arrive at your door.
+          </p>
+          <p class="greeting-signoff">With light, always <span>✦</span></p>
+          <div class="greeting-bottom" aria-hidden="true">शुभ दीपावली</div>
+        </div>
+      </section>
+
+      <section class="personal-wish section-pad" id="your-wish" aria-labelledby="personal-wish-title">
+        <canvas class="fireworks-canvas wish-canvas" id="wish-canvas" aria-hidden="true"></canvas>
+        <div class="personal-wish-content">
+          <p class="eyebrow">A LITTLE SURPRISE, JUST FOR YOU</p>
+          <h2 id="personal-wish-title">Your name. Your <em>Diwali wish.</em></h2>
+          <p class="personal-wish-intro">Tell us who to celebrate, and open a little envelope of light and love for your family.</p>
+          <form class="name-form" id="name-form">
+            <label for="guest-name">Your name</label>
+            <div class="name-entry">
+              <input id="guest-name" name="name" type="text" autocomplete="name" maxlength="40" placeholder="Type your name here" required />
+              <button class="button button-gold" id="open-wish-button" type="submit">
+                <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Open your wish
+              </button>
+            </div>
+          </form>
+          <div class="envelope-stage" id="envelope-stage">
+            <div class="envelope-art" id="envelope-art" aria-hidden="true">
+              <div class="envelope-paper"></div>
+              <div class="envelope-back"></div>
+              <div class="envelope-flap"></div>
+              <div class="envelope-front"></div>
+              <span class="envelope-seal">✳</span>
+            </div>
+            <article class="personal-message" id="personal-message" aria-live="polite" hidden>
+              <p class="personal-salutation" id="personal-salutation"></p>
+              <p>May this Diwali fill your home with the warm glow of a thousand diyas, your hearts with laughter, and the days ahead with peace, health, prosperity and new beginnings.</p>
+              <p>May every shared meal bring you closer, every smile become a beautiful memory, and every dream find its way to the light.</p>
+              <p>Wishing you and your loved ones a joyful, love-filled and truly beautiful Diwali.</p>
+              <p class="personal-happy">Happy Diwali 2026! <span>♥</span></p>
+              <p class="personal-signoff">With warm wishes,<br /><strong>Mehul Sharma</strong></p>
+              <div class="personal-share-actions">
+                <button class="share-button" id="copy-wish-link" type="button">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy my wish link</span>
+                </button>
+                <a class="share-button whatsapp-button" id="personal-whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>Send to family</span>
+                </a>
+              </div>
+            </article>
+          </div>
+          <p class="personal-hint" id="personal-hint" aria-live="polite">Your family’s little envelope is waiting to be opened.</p>
+        </div>
+      </section>
+
+      <section class="nova-section section-pad" id="wish" aria-labelledby="nova-title">
+        <div class="nova-card">
+          <div class="nova-orbit nova-orbit-one" aria-hidden="true"></div>
+          <div class="nova-orbit nova-orbit-two" aria-hidden="true"></div>
+          <div class="nova-card-content">
+            <p class="eyebrow"><span class="nova-star">✳</span> A WISH, MADE JUST FOR YOU</p>
+            <h2 id="nova-title">A Special Diwali<br /><em>Wish From Mehul Sharma</em> <span class="heart">♥</span></h2>
+            <div class="ornament-divider" aria-hidden="true"><span></span>✦<span></span></div>
+            <div class="nova-message">
+              <p>Dear Mehul,</p>
+              <p>May your life shine brighter than millions of diyas.</p>
+              <p>May your dreams become reality, your hard work turn into success, and your creativity bring new innovations into this world.</p>
+              <p>Keep learning, keep building, and keep shining.</p>
+              <p>Wishing you and your family endless happiness, prosperity and success.</p>
+              <p class="nova-happy">Happy Diwali, Mehul! <span>♥</span></p>
+            </div>
+            <div class="nova-signoff">
+              <span class="nova-avatar" aria-hidden="true">✳</span>
+              <span><small>With Love,</small><strong>Mehul Sharma</strong></span>
+            </div>
+          </div>
+          <div class="nova-card-stamp" aria-hidden="true"><span>MADE WITH</span><i class="fa-solid fa-heart"></i><span>FOR YOU</span></div>
+        </div>
+      </section>
+
+      <section class="fireworks-section section-pad" id="fireworks" aria-labelledby="fireworks-title">
+        <canvas class="fireworks-canvas display-canvas" id="display-canvas" aria-hidden="true"></canvas>
+        <div class="fireworks-content">
+          <p class="eyebrow">MAKE A WISH</p>
+          <h2 id="fireworks-title">A sky full of <em>possibilities.</em></h2>
+          <p>Every new spark holds a little hope. Tap anywhere and send yours into the sky.</p>
+          <button class="button button-outline" id="firework-button" type="button">
+            <i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i> Make a wish
+          </button>
+          <p class="fireworks-hint">TAP OR CLICK ANYWHERE ABOVE</p>
+        </div>
+      </section>
+
+      <section class="share-section section-pad" aria-labelledby="share-title">
+        <div class="share-panel">
+          <div>
+            <p class="eyebrow eyebrow-dark">LIGHT IS BETTER SHARED</p>
+            <h2 id="share-title">Pass the glow <em>along.</em></h2>
+          </div>
+          <div class="share-actions">
+            <a class="share-button whatsapp-button" id="whatsapp-share" href="https://wa.me/?text=Happy%20Diwali%202026!" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span>
+            </a>
+            <button class="share-button" id="copy-link-button" type="button">
+              <i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy link</span>
+            </button>
+            <button class="share-button" id="share-button" type="button">
+              <i class="fa-solid fa-arrow-up-from-bracket" aria-hidden="true"></i><span>Share wish</span>
+            </button>
+          </div>
+          <p class="share-status" id="share-status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <section class="anar-section section-pad" id="grand-finale" aria-labelledby="anar-title">
+      <canvas class="fireworks-canvas anar-canvas" id="anar-canvas" aria-hidden="true"></canvas>
+      <div class="anar-content">
+        <p class="eyebrow">A LITTLE FINALE OF LIGHT</p>
+        <h2 id="anar-title">Let your joy <em>rise.</em></h2>
+        <p class="anar-copy">One last sparkle for a night full of love. Light a bright golden anaar whenever you like.</p>
+      </div>
+      <div class="anar-display" aria-hidden="true">
+        <span class="anar-aura"></span>
+        <span class="anar-fountain-glow"></span>
+        <span class="anar-fountain-core"></span>
+        <span class="anar-cone"><span class="anar-cone-star">✳</span><span class="anar-cone-band"></span></span>
+        <span class="anar-display-shadow"></span>
+      </div>
+      <button class="button button-gold anar-button" id="anar-button" type="button">
+        <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i> Light the grand anaar
+      </button>
+      <p class="anar-status" id="anar-status" aria-live="polite">Light the anaar whenever you like.</p>
+    </section>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home" aria-label="Mehul Sharma, back to top">
+        <span class="brand-mark" aria-hidden="true">✳</span><span>Mehul Sharma</span>
+      </a>
+      <p>Made with a little light and a lot of love <span>♥</span></p>
+      <a href="#home" class="back-to-top">BACK TO THE LIGHT <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
